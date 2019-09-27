@@ -39,7 +39,7 @@ class CreateConfigsTable extends Migration
             $table->boolean('payu_payment')->default(true);
             $table->boolean('preloader')->default(true);
             $table->boolean('rightclick')->default(true);
-            $table->boolean('inspect')->default(ture);
+            $table->boolean('inspect')->default(true);
             $table->boolean('goto')->default(true);
           $table->timestamps();
         });
