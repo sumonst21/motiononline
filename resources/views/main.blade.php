@@ -34,7 +34,110 @@
         <!-- end out section -->
       @endforeach
     @endif
-  
+    <!-- Pricing plan main block -->
+    
+    @if(isset($plans) && count($plans) > 0)
+      <div class="purchase-plan-main-block main-home-section-plans">
+        <div class="panel-setting-main-block">
+          <div class="container">
+            <div class="plan-block-dtl">
+              <h3 class="plan-dtl-heading">Membership Plans</h3>
+              <ul>
+                <li>Select any of your preferred membership package &amp; make payment.
+                </li>
+                <li>You can cancel your subscription anytime later. 
+                  
+                  @if(Auth::check())
+                    @php  
+                       $id = Auth::user()->id;
+                       $getuserplan = App\PaypalSubscription::where('status','=','1')->where('user_id',$id)->first();
+                    @endphp
+                  @endif
+
+                  <?php
+                    $today =  date('Y-m-d h:i:s');
+                  ?>
+
+    
+                </li>
+              </ul>
+            </div>
+           
+           
+            <div class="snip1404 row">
+                
+              @foreach($plans as $plan)
+              @if($plan->delete_status ==1 )
+                @if($plan->status == 1)
+                  <div class="col-md-4">
+                   
+                    <div class="main-plan-section"  style="background: #ecf0f1">
+                      <header>
+                        <h4 class="plan-title">
+                          {{$plan->name}}
+                        </h4><br>
+                       
+                        <div class="plan-cost"><span class="plan-price"><i class="{{$currency_symbol}}"></i>{{$plan->amount}}</span><span class="plan-type">
+                            <i class="{{$currency_symbol}}"></i> {{number_format(($plan->amount) / ($plan->interval_count),2)}}
+                            @if($plan->interval == 'year')
+                              Yearly
+                            @elseif($plan->interval == 'month')
+                              Monthly
+                            @elseif($plan->interval == 'week')
+                              Weekly
+                            @elseif($plan->interval == 'day')
+                              Daily
+                            @endif
+                        </span></div>
+                      </header>
+                      @php
+                        $collectionHalves = array_chunk($pricingTexts->all(), ceil($pricingTexts->count() / 1));
+                      @endphp
+                      @foreach ($collectionHalves[0] as $element)
+                      <ul class="plan-features">
+                        @if (isset($pricingTexts) && count($pricingTexts) > 0)
+                        <li><i class="fa fa-check"> </i>{{ $element->value }} {{$plan->interval_count}}
+                            @if($plan->interval_count>1)
+                              {{ $plan->interval }}s
+                            @else
+                              {{$plan->interval}}
+                            @endif
+                         </li>
+
+
+
+
+
+
+                        @endif
+                      </ul>
+                      @endforeach
+
+                      
+                      @auth
+                      @if($getuserplan['package_id'] == $plan->id && $getuserplan->status == "1" && $today <= $getuserplan->subscription_to )
+                        
+                        <div class="plan-select"><a class="btn btn-prime">Already Subscribed</a></div>
+
+                      @else
+                      
+                        <div class="plan-select"><a href="{{route('get_payment', $plan->id)}}" class="btn btn-prime">Subscribe</a></div>
+
+                      @endif
+                        @else
+                        <div class="plan-select"><a href="{{route('register')}}">Register Now</a></div>
+                      @endauth
+                    </div>
+                  </div>
+                @endif
+              @endif
+              @endforeach
+            </div>
+          </div>
+        </div>
+      </div>
+    @endif
+
 
  @if(isset(Auth::user()->multiplescreen))
 
