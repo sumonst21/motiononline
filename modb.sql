@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2019 a las 14:51:51
+-- Tiempo de generación: 01-10-2019 a las 21:39:28
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -1444,7 +1444,7 @@ CREATE TABLE `paypal_subscriptions` (
 
 INSERT INTO `paypal_subscriptions` (`id`, `user_id`, `payment_id`, `user_name`, `package_id`, `price`, `status`, `method`, `subscription_from`, `subscription_to`, `created_at`, `updated_at`) VALUES
 (1, 24, 'by admin', 'jorge caca', 3, 30000.00, 1, 'by Admin', '2019-08-27 21:47:30', '2019-11-27 20:47:30', '2019-08-27 21:47:21', '2019-08-27 21:47:30'),
-(2, 25, 'by admin', 'martin castro', 3, 30000.00, 1, 'by Admin', '2019-08-27 21:47:45', '2019-11-27 20:47:45', '2019-08-27 21:47:45', '2019-08-27 21:47:45'),
+(2, 25, 'by admin', 'martin castro', 3, 39900.00, 1, 'by Admin', '2019-10-01 20:16:58', '2020-01-01 20:16:58', '2019-08-27 21:47:45', '2019-10-01 20:16:58'),
 (3, 26, 'by admin', 'diosito borges', 3, 30000.00, 1, 'by Admin', '2019-08-28 00:43:16', '2019-11-27 23:43:16', '2019-08-27 21:47:59', '2019-08-28 00:43:16'),
 (4, 28, 'by admin', 'josepelao@gmail.com', 1, 50000.00, 1, 'by Admin', '2019-08-27 21:48:13', '2019-11-27 20:48:13', '2019-08-27 21:48:13', '2019-08-27 21:48:13'),
 (5, 27, 'by admin', 'kimi linda', 2, 59000.00, 1, 'by Admin', '2019-09-23 19:00:05', '2019-12-23 19:00:05', '2019-08-27 21:48:22', '2019-09-23 19:00:05'),
@@ -1563,12 +1563,12 @@ CREATE TABLE `pricing_texts` (
 --
 
 INSERT INTO `pricing_texts` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
-(1, 'title1', '{\"en\":\"Min duration\",\"de\":\"Minimale duur\",\"es-co\":\"Min duration vbbffghhgh\",\"es\":\"Min duration\",\"De\":\"Min duration\"}', NULL, '2019-06-10 23:42:49'),
-(2, 'title2', '{\"en\":\"Watch on your laptop, TV, phone and tablet\",\"de\":\"Kijk op je laptop, tv, telefoon en tablet\",\"es-co\":\"Watch on your laptop, TV, phone and tablet\",\"es\":\"Watch on your laptop, TV, phone and tablet\",\"De\":\"Watch on your laptop, TV, phone and tablet\"}', NULL, '2019-06-10 23:42:49'),
-(3, 'title3', '{\"en\":\"Full HD and 4K available\",\"de\":\"Full HD en 4K beschikbaar\",\"es-co\":\"Full HD and 4K available\",\"es\":\"Full HD and 4K available\",\"De\":\"Full HD and 4K available\"}', NULL, '2019-06-10 23:42:49'),
-(4, 'title4', '{\"en\":\"Unlimited movies and TV shows\",\"de\":\"Ongelimiteerde films en tv-programma\'s\",\"es-co\":\"Unlimited movies and TV shows\",\"es\":\"Unlimited movies and TV shows\",\"De\":\"Unlimited movies and TV shows\"}', NULL, '2019-06-10 23:52:15'),
-(5, 'title5', '{\"en\":\"24\\/7 Tech Support\",\"de\":\"24\\/7 technische ondersteuning\",\"es-co\":\"24\\/7 Tech Support\",\"es\":\"24\\/7 Tech Supports\",\"De\":\"24\\/7 Tech Support\"}', NULL, '2019-06-10 23:42:49'),
-(6, 'title6', '{\"en\":\"Cancel anytime\",\"de\":\"Annuleer op elk gewenst moment\",\"es-co\":\"Cancel anytime\",\"es\":\"Cancel anytimes\",\"De\":\"Cancel anytimes\"}', NULL, '2019-06-10 23:42:49');
+(1, 'title1', '{\"en\":\"Duracion\",\"de\":\"Minimale duur\",\"es-co\":\"Min duration vbbffghhgh\",\"es\":\"Min duration\",\"De\":\"Min duration\"}', NULL, '2019-10-01 14:12:09'),
+(2, 'title2', '{\"en\":\"Conectate desde tu telefono celular o tablet\",\"de\":\"Kijk op je laptop, tv, telefoon en tablet\",\"es-co\":\"Watch on your laptop, TV, phone and tablet\",\"es\":\"Watch on your laptop, TV, phone and tablet\",\"De\":\"Watch on your laptop, TV, phone and tablet\"}', NULL, '2019-10-01 14:12:09'),
+(3, 'title3', '{\"en\":\"Contenido exclusivo de Motion\",\"de\":\"Full HD en 4K beschikbaar\",\"es-co\":\"Full HD and 4K available\",\"es\":\"Full HD and 4K available\",\"De\":\"Full HD and 4K available\"}', NULL, '2019-10-01 14:12:09'),
+(4, 'title4', '{\"en\":\"Subiremos tus historias entrenando!\",\"de\":\"Ongelimiteerde films en tv-programma\'s\",\"es-co\":\"Unlimited movies and TV shows\",\"es\":\"Unlimited movies and TV shows\",\"De\":\"Unlimited movies and TV shows\"}', NULL, '2019-10-01 14:16:28'),
+(5, 'title5', '{\"en\":\"Asesoramiento 24\\/7\",\"de\":\"24\\/7 technische ondersteuning\",\"es-co\":\"24\\/7 Tech Support\",\"es\":\"24\\/7 Tech Supports\",\"De\":\"24\\/7 Tech Support\"}', NULL, '2019-10-01 14:12:09'),
+(6, 'title6', '{\"en\":\"Beneficios y descuentos exclusivos\",\"de\":\"Annuleer op elk gewenst moment\",\"es-co\":\"Cancel anytime\",\"es\":\"Cancel anytimes\",\"De\":\"Cancel anytimes\"}', NULL, '2019-10-01 14:16:28');
 
 -- --------------------------------------------------------
 
@@ -1585,12 +1585,6 @@ CREATE TABLE `questions` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `questions`
---
-
-INSERT INTO `questions` (`id`, `user_id`, `question`, `answer`, `status`, `created_at`, `updated_at`) VALUES
 
 -- --------------------------------------------------------
 
@@ -1790,9 +1784,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `image`, `email`, `password`, `google_id`, `facebook_id`, `gitlab_id`, `dob`, `mobile`, `stripe_id`, `card_brand`, `card_last_four`, `trial_ends_at`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', NULL, 'admin@mediacity.co.in', '$2y$10$1w2kbraQWFVkZVcyAwXmgeGhD4QYxTcg9Hx12KYtNN821CuOMtyda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'yExuo4jLdXfs3hDwAueNtezxK3SIq2e7nGJ9O885VSPDBLyf1bEjMvKyPipn', '2018-04-24 07:56:34', '2018-04-24 07:56:34'),
+(1, 'Admin', NULL, 'admin@mediacity.co.in', '$2y$10$1w2kbraQWFVkZVcyAwXmgeGhD4QYxTcg9Hx12KYtNN821CuOMtyda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'lSZ90Op5Z73SHhAIMc101xNAAadbTOhMuanFYcpiNs2AkxfyzZMpTAwBM5VC', '2018-04-24 07:56:34', '2018-04-24 07:56:34'),
 (24, 'Jorge Caca', NULL, 'jorge@caca.com', '$2y$10$AnaSIa0OtRknN.pC17mY8e8yreDNk/aqB/ebDfPa2eyOuXqyQSvVa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'rTsjc0ZvoQpvTdLIimgfsGppKJ7EYVxFj4Dd69HKqoat2J1OPGGf3335m6o9', '2019-08-27 21:29:37', '2019-08-28 00:00:17'),
-(25, 'Martin Castro', NULL, 'martin@caca.com', '$2y$10$ZbOttQbaEf2FyxN1GBjUi.d6mdI3XXITCHCQ0YWRtKcLsUfx.R5dK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'OgkBxh2HriMbSzJivllGE4TnkMsRCvHE8qtMobBofwA5NBkNuQzDRLJwg4qS', '2019-08-27 21:30:03', '2019-08-28 00:00:32'),
+(25, 'Martina Dovic Z.', NULL, 'martinadzaf@uolmail.com', '$2y$10$EEyjTuuwup6tfCVRRxd3WuLNw9twH.guNPpIMAAIHuVGgHsC2fLGm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'OgkBxh2HriMbSzJivllGE4TnkMsRCvHE8qtMobBofwA5NBkNuQzDRLJwg4qS', '2019-08-27 21:30:03', '2019-10-01 20:15:54'),
 (26, 'Diosito Borges', NULL, 'diosito@caca.com', '$2y$10$5dS7IbOvX3vjHxUxSlLbDOdG0fTK..sR2uCwhABstQcDs7KSbtO8.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'FBUiQtumBIrp6XTYBmBh8obPDtpA99VErMLc1fkvhfXwIho4I2zgr5ICFHjQ', '2019-08-27 21:30:31', '2019-08-28 00:00:46'),
 (27, 'Kimi Linda', NULL, 'kimilinda@amor.com', '$2y$10$bLH7K9eKx4LYl19OGtHJGeh4b.Sx6hUD4wUlHKLs3RTmfIs2DtzYm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'po1KLVTQ64h48YnuMXfvLdlxNIRWxmRgvZw8D9GZofV4vODY2j1NGaydELfm', '2019-08-27 21:31:06', '2019-08-28 00:00:01'),
 (28, 'Jose Pelado', NULL, 'pelao@caca.com', '$2y$10$x/SJzlbmrLPWWnO9X1iyj.7N0nv4KQ2LOthEEyQ10R0BlTywNVpI6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'N0YhAomapcyLlSKhjA7dSvIzFJwcfD8OTSbdsb1EtGClzUKuWUOdE05hwJbE', '2019-08-27 21:31:33', '2019-08-27 23:59:39'),
@@ -2134,11 +2128,6 @@ CREATE TABLE `wishlist_admins` (
 --
 
 INSERT INTO `wishlist_admins` (`id`, `user_group_id`, `video_group_id`, `day`, `created_at`, `updated_at`) VALUES
-(98, 4, '[\"38\"]', 3, '2019-09-25 01:31:34', '2019-09-25 01:31:34'),
-(99, 4, '[\"43\"]', 5, '2019-09-25 01:31:40', '2019-09-25 01:31:40'),
-(100, 4, '[\"40\"]', 2, '2019-09-25 02:16:14', '2019-09-25 02:16:14'),
-(101, 4, '[\"45\"]', 4, '2019-09-25 02:17:07', '2019-09-25 02:17:07'),
-(102, 4, '[\"39\"]', 6, '2019-09-25 02:17:16', '2019-09-25 02:17:16'),
 (104, 6, '[\"38\"]', 3, '2019-09-26 13:21:13', '2019-09-26 13:21:13'),
 (107, 6, '[\"39\"]', 6, '2019-09-26 13:21:23', '2019-09-26 13:21:23'),
 (109, 6, '[\"47\",\"10\"]', 1, '2019-09-26 13:24:33', '2019-09-26 13:24:33'),
@@ -2150,7 +2139,8 @@ INSERT INTO `wishlist_admins` (`id`, `user_group_id`, `video_group_id`, `day`, `
 (119, 7, '[\"38\"]', 3, '2019-09-29 18:25:28', '2019-09-29 18:25:28'),
 (120, 7, '[\"10\",\"39\"]', 4, '2019-09-29 18:25:39', '2019-09-29 18:25:39'),
 (121, 7, '[\"16\",\"43\"]', 5, '2019-09-29 18:25:45', '2019-09-29 18:25:45'),
-(122, 7, '[\"39\"]', 6, '2019-09-29 18:26:02', '2019-09-29 18:26:02');
+(122, 7, '[\"39\"]', 6, '2019-09-29 18:26:02', '2019-09-29 18:26:02'),
+(123, 4, '[\"10\"]', 1, '2019-09-30 18:16:51', '2019-09-30 18:16:51');
 
 -- --------------------------------------------------------
 
@@ -2892,7 +2882,7 @@ ALTER TABLE `wishlists`
 -- AUTO_INCREMENT de la tabla `wishlist_admins`
 --
 ALTER TABLE `wishlist_admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlist_user_groups`
