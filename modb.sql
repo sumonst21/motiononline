@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-10-2019 a las 21:39:28
+-- Tiempo de generación: 02-10-2019 a las 21:23:41
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -1296,7 +1296,12 @@ INSERT INTO `my_progresses` (`id`, `user_id`, `weight`, `fat`, `calorie`, `creat
 (74, 32, NULL, NULL, '1500', '2019-09-29 18:01:17', '2019-09-29 18:01:17'),
 (75, 32, NULL, NULL, '1400', '2019-09-29 18:01:26', '2019-09-29 18:01:26'),
 (76, 32, NULL, NULL, '1400', '2019-09-29 18:01:37', '2019-09-29 18:01:37'),
-(77, 32, NULL, NULL, '1400', '2019-09-29 18:02:41', '2019-09-29 18:02:41');
+(77, 32, NULL, NULL, '1400', '2019-09-29 18:02:41', '2019-09-29 18:02:41'),
+(78, 1, '85', '16', '2000', '2019-10-02 10:11:21', '2019-10-02 10:11:21'),
+(79, 1, NULL, NULL, '2400', '2019-10-02 10:23:49', '2019-10-02 10:23:49'),
+(80, 1, NULL, NULL, '2000', '2019-10-02 10:24:13', '2019-10-02 10:24:13'),
+(81, 1, '85', '16', NULL, '2019-10-02 10:24:24', '2019-10-02 10:24:24'),
+(82, 1, '85', '15', NULL, '2019-10-02 10:24:36', '2019-10-02 10:24:36');
 
 -- --------------------------------------------------------
 
@@ -1323,12 +1328,15 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_id`, `notifiable_type`, `data`, `movie_id`, `tv_id`, `title`, `read_at`, `created_at`, `updated_at`) VALUES
+('11de1773-c7d0-4eaa-bdd6-bd8e218f27ff', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"sasa\",\"data\":\"sasassasasa\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'sasa', '2019-10-02 14:00:54', '2019-10-02 13:21:26', '2019-10-02 14:00:54'),
+('1ce127d1-22af-433c-ac56-9b5c2d91fbeb', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', '2019-10-02 14:04:46', '2019-10-02 14:03:38', '2019-10-02 14:04:46'),
 ('1d99bf34-e072-4bfb-9a96-57e07330bcaa', 'App\\Notifications\\MyNotification', 32, 'App\\User', '{\"title\":\"Dudas\",\"data\":\"Tienes alguna duda?, consultanos en \\\"Mi chat\\\" !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"32\"]]}', 0, 0, 'Dudas', NULL, '2019-09-30 03:53:40', '2019-09-30 03:53:40'),
 ('230aa2fb-b4af-4c8f-93af-1e5cde684326', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Toca evaluarte\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"29\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1]}', 29, 0, 'Toca evaluarte', '2019-09-17 16:37:27', '2019-09-17 16:36:58', '2019-09-17 16:37:27'),
 ('326d7489-1f10-4c69-9a0d-4478da27fac6', 'App\\Notifications\\MyNotification', 28, 'App\\User', '{\"title\":\"Toca evaluarte\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"29\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24,25,26,27,28]}', 29, 0, 'Toca evaluarte', NULL, '2019-09-17 16:36:58', '2019-09-17 16:36:58'),
 ('3ad3436e-45a4-4335-b827-c30c114836d0', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"my new notification\",\"data\":\"Just an example,,go and create notification from admin\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'my new notification', '2019-09-17 16:30:19', '2019-09-17 15:30:14', '2019-09-17 16:30:19'),
 ('60785e09-4cf8-4d1d-9ad6-5d251ad9e9dc', 'App\\Notifications\\MyNotification', 32, 'App\\User', '{\"title\":\"Bienvenido a Motion Online\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"32\"]]}', 0, 0, 'Bienvenido a Motion Online', NULL, '2019-09-30 03:52:44', '2019-09-30 03:52:44'),
 ('7f13988e-f833-49cb-b9c8-29c75609d46b', 'App\\Notifications\\MyNotification', 28, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24,25,26,27,28]}', 0, 0, 'Entrenaste ?', NULL, '2019-09-17 16:29:08', '2019-09-17 16:29:08'),
+('82ebb86a-0c4a-429d-a5af-49a73599fe59', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', NULL, '2019-10-02 18:29:46', '2019-10-02 18:29:46'),
 ('82ed4268-eeb5-4045-a577-de978a03509b', 'App\\Notifications\\MyNotification', 24, 'App\\User', '{\"title\":\"Toca evaluarte\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"29\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24]}', 29, 0, 'Toca evaluarte', NULL, '2019-09-17 16:36:58', '2019-09-17 16:36:58'),
 ('9a7b9059-ee4c-4e9d-a0cf-6ae022c5c4f1', 'App\\Notifications\\MyNotification', 24, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24]}', 0, 0, 'Entrenaste ?', NULL, '2019-09-17 16:29:08', '2019-09-17 16:29:08'),
 ('a1909518-493a-442d-88f9-365a887fce8e', 'App\\Notifications\\MyNotification', 27, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24,25,26,27]}', 0, 0, 'Entrenaste ?', '2019-09-17 16:40:39', '2019-09-17 16:29:08', '2019-09-17 16:40:39'),
@@ -2090,7 +2098,9 @@ INSERT INTO `views` (`id`, `viewable_type`, `viewable_id`, `visitor`, `collectio
 (197, 'App\\Movie', 169, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-25 06:17:02'),
 (198, 'App\\Movie', 43, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-25 13:43:16'),
 (199, 'App\\Movie', 144, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-26 15:38:01'),
-(200, 'App\\Movie', 29, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-26 15:43:14');
+(200, 'App\\Movie', 29, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-26 15:43:14'),
+(201, 'App\\Movie', 43, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 14:04:51'),
+(202, 'App\\Movie', 138, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 14:08:44');
 
 -- --------------------------------------------------------
 
@@ -2140,7 +2150,8 @@ INSERT INTO `wishlist_admins` (`id`, `user_group_id`, `video_group_id`, `day`, `
 (120, 7, '[\"10\",\"39\"]', 4, '2019-09-29 18:25:39', '2019-09-29 18:25:39'),
 (121, 7, '[\"16\",\"43\"]', 5, '2019-09-29 18:25:45', '2019-09-29 18:25:45'),
 (122, 7, '[\"39\"]', 6, '2019-09-29 18:26:02', '2019-09-29 18:26:02'),
-(123, 4, '[\"10\"]', 1, '2019-09-30 18:16:51', '2019-09-30 18:16:51');
+(124, 4, '[\"10\",\"47\"]', 1, '2019-10-02 10:47:47', '2019-10-02 10:47:47'),
+(126, 4, '[\"16\",\"40\"]', 2, '2019-10-02 10:48:00', '2019-10-02 10:48:00');
 
 -- --------------------------------------------------------
 
@@ -2756,7 +2767,7 @@ ALTER TABLE `multiplescreens`
 -- AUTO_INCREMENT de la tabla `my_progresses`
 --
 ALTER TABLE `my_progresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT de la tabla `packages`
@@ -2870,7 +2881,7 @@ ALTER TABLE `videolinks`
 -- AUTO_INCREMENT de la tabla `views`
 --
 ALTER TABLE `views`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlists`
@@ -2882,7 +2893,7 @@ ALTER TABLE `wishlists`
 -- AUTO_INCREMENT de la tabla `wishlist_admins`
 --
 ALTER TABLE `wishlist_admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlist_user_groups`
