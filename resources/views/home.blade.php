@@ -1,5 +1,11 @@
 @extends('layouts.theme')
 @section('title',"$menu->name")
+ @section('custom-meta')
+<style type="text/css">
+.modal-open .modal {
+    z-index: 99999999999999999999;
+}</style>
+@endsection
 @section('main-wrapper')
 <!-- main wrapper  slider -->
 <section id="wishlistelement" class="main-wrapper">

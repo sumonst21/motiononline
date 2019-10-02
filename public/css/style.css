@@ -3262,3 +3262,10 @@ text.highcharts-title {
 text {
     fill: #B1B1B1 !important;
 }
+.modal-open .modal {
+    z-index: 9999999999999999999999;
+}
+.modal-content {
+    
+    background-color: #111;
+  }

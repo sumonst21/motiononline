@@ -43,28 +43,7 @@
 
             <small class="text-danger"><?php echo e($errors->first('fat')); ?></small>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-block">Submit</button>
-          
-          <?php echo Form::close(); ?>
-
-        </div>
-
-      </div>
-    </div><br><br>
-    <div class="row">
-      <div class="col-md-9 col-sm-12">
-        <div class="panel-body">    
-          <?php echo $caloriechart->html(); ?>
-
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div style="color: white;">
-          <?php echo Form::open(['method' => 'POST', 'action' => 'MyProgressController@store']); ?>
-
-
-          <div id="fat" class="form-group<?php echo e($errors->has('calorie') ? ' has-error' : ''); ?>">
+<div id="fat" class="form-group<?php echo e($errors->has('calorie') ? ' has-error' : ''); ?>">
             <?php echo Form::label('calorie', 'Your Calories'); ?>
 
             <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Enter your Calories"></i>
@@ -72,7 +51,6 @@
 
             <small class="text-danger"><?php echo e($errors->first('calorie')); ?></small>
           </div>
-
           <button type="submit" class="btn btn-primary btn-block">Submit</button>
           
           <?php echo Form::close(); ?>
@@ -81,6 +59,7 @@
 
       </div>
     </div><br><br>
+   
      <div class="row">
       <div class="col-sm-2">
         <h5><?php echo e($header_translations->where('key', 'excercise')->first->value->value); ?></h5></div>
@@ -195,7 +174,6 @@
 
 <?php echo $exchart->script(); ?> 
 <?php echo $exchart2->script(); ?> 
-<?php echo $caloriechart->script(); ?> 
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.theme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

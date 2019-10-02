@@ -57,7 +57,7 @@ class MyProgressController extends Controller
         foreach ($user_data as $key => $value) {
          $weight[]= (int)$value->weight;
          $fat[]= (int)$value->fat;
-         $calorie[]= (int)$value->calorie;
+         $calorie[]= (int)$value->calorie/10;
          $datetime=$value->created_at;
          $mydate[]=substr($datetime, 0, 10);
        }
@@ -211,22 +211,15 @@ $fat=array_filter($fat);
 $calorie=array_filter($calorie);
  $chart = \Charts::multi('areaspline', 'highcharts')
  ->title('My Weight Report')
- ->colors(['#ff0000', '#ff9f43'])
+ ->colors(['#ff0000', '#01a3a4', '#ff9f43'])
  ->labels($mydate)
  ->dataset('Weight', $weight,['KG'])
+ ->dataset('Calories', $calorie,['KG'])
  ->dataset('Fat%',  $fat,['%']);
 
 
-$caloriechart = \Charts::multi('areaspline', 'highcharts')
- ->title('My Calorie Report')
- ->colors([ '#01a3a4'])
- ->labels($mydate)
- ->dataset('Calories', $calorie,['KG']);
 
-
-
-
- return view('myprogress',compact('chart','myexercise','myexercise2','exchart','exchart2','caloriechart'));
+ return view('myprogress',compact('chart','myexercise','myexercise2','exchart','exchart2'));
 
 }
 

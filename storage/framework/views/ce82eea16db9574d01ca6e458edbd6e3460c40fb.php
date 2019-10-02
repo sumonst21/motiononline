@@ -267,7 +267,7 @@ Author: Media City
            
               </span>
 
-              <ul class="dropdown-menu prime-dropdown-menu">
+              <ul class="dropdown-menu prime-dropdown-menu-right">
 
 
                 <?php $__currentLoopData = auth()->user()->unreadnotifications; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $n): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
@@ -326,7 +326,7 @@ Author: Media City
                     <?php if(isset($nav_menus)): ?>
                     <?php if($subscribed == 1): ?>
                      <li><a href="<?php echo e(url('account/virtualcard')); ?>" class="active"><?php echo e($header_translations->where('key', 'virtualcard')->first->value->value); ?></a></li>
-                      <li><a href="<?php echo e(url('account/userwatchlist', $menu->slug)); ?>" class="active"><?php echo e($header_translations->where('key', 'watchlist')->first->value->value); ?></a></li>
+                      <li><a href="<?php echo e(url('myaccount/userwatchlist', $menu->slug)); ?>" class="active"><?php echo e($header_translations->where('key', 'watchlist')->first->value->value); ?></a></li>
                       <li><a href="<?php echo e(url('account/myprogress')); ?>" class="active"><?php echo e($header_translations->where('key', 'report')->first->value->value); ?></a></li>
                        <li><a href="<?php echo e(url('account/askquestion')); ?>" class="active"><?php echo e($header_translations->where('key', 'question')->first->value->value); ?></a></li>
                     <?php else: ?>
@@ -334,6 +334,7 @@ Author: Media City
                     <?php endif; ?>
                     <?php endif; ?>
                     <li><a href="<?php echo e(url('account')); ?>"><?php echo e($header_translations->where('key', 'dashboard') ? $header_translations->where('key', 'dashboard')->first->value->value : ''); ?></a></li>
+                    
                     
                     <li>
                       <a href="<?php echo e(route('logout')); ?>"

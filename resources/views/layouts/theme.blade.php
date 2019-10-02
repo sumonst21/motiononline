@@ -267,7 +267,7 @@ Author: Media City
            
               </span>
 
-              <ul class="dropdown-menu prime-dropdown-menu">
+              <ul class="dropdown-menu prime-dropdown-menu-right">
 
 
                 @foreach (auth()->user()->unreadnotifications as $n) 
@@ -326,7 +326,7 @@ Author: Media City
                     @if(isset($nav_menus))
                     @if($subscribed == 1)
                      <li><a href="{{url('account/virtualcard')}}" class="active">{{$header_translations->where('key', 'virtualcard')->first->value->value}}</a></li>
-                      <li><a href="{{url('account/userwatchlist', $menu->slug)}}" class="active">{{$header_translations->where('key', 'watchlist')->first->value->value}}</a></li>
+                      <li><a href="{{url('myaccount/userwatchlist', $menu->slug)}}" class="active">{{$header_translations->where('key', 'watchlist')->first->value->value}}</a></li>
                       <li><a href="{{url('account/myprogress')}}" class="active">{{$header_translations->where('key', 'report')->first->value->value}}</a></li>
                        <li><a href="{{url('account/askquestion')}}" class="active">{{$header_translations->where('key', 'question')->first->value->value}}</a></li>
                     @else
@@ -334,6 +334,7 @@ Author: Media City
                     @endif
                     @endif
                     <li><a href="{{url('account')}}">{{$header_translations->where('key', 'dashboard') ? $header_translations->where('key', 'dashboard')->first->value->value : ''}}</a></li>
+                    
                     
                     <li>
                       <a href="{{ route('logout') }}"

@@ -1,4 +1,10 @@
 <?php $__env->startSection('title',"$menu->name"); ?>
+ <?php $__env->startSection('custom-meta'); ?>
+<style type="text/css">
+.modal-open .modal {
+    z-index: 99999999999999999999;
+}</style>
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('main-wrapper'); ?>
 <!-- main wrapper  slider -->
 <section id="wishlistelement" class="main-wrapper">

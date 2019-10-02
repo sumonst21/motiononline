@@ -38,31 +38,12 @@
             {!! Form::text('fat', null, ['class' => 'form-control', 'placeholder' => 'Please enter your Fat %']) !!}
             <small class="text-danger">{{ $errors->first('fat') }}</small>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-block">Submit</button>
-          
-          {!! Form::close()!!}
-        </div>
-
-      </div>
-    </div><br><br>
-    <div class="row">
-      <div class="col-md-9 col-sm-12">
-        <div class="panel-body">    
-          {!! $caloriechart->html() !!}
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div style="color: white;">
-          {!! Form::open(['method' => 'POST', 'action' => 'MyProgressController@store']) !!}
-
-          <div id="fat" class="form-group{{ $errors->has('calorie') ? ' has-error' : '' }}">
+<div id="fat" class="form-group{{ $errors->has('calorie') ? ' has-error' : '' }}">
             {!! Form::label('calorie', 'Your Calories') !!}
             <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Enter your Calories"></i>
             {!! Form::text('calorie', null, ['class' => 'form-control', 'placeholder' => 'Please enter your Calories']) !!}
             <small class="text-danger">{{ $errors->first('calorie') }}</small>
           </div>
-
           <button type="submit" class="btn btn-primary btn-block">Submit</button>
           
           {!! Form::close()!!}
@@ -70,6 +51,7 @@
 
       </div>
     </div><br><br>
+   
      <div class="row">
       <div class="col-sm-2">
         <h5>{{$header_translations->where('key', 'excercise')->first->value->value}}</h5></div>
@@ -170,6 +152,5 @@
 
 {!! $exchart->script() !!} 
 {!! $exchart2->script() !!} 
-{!! $caloriechart->script() !!} 
 
 @endsection

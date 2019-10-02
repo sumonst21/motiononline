@@ -39,7 +39,7 @@
                  
                   @foreach ($nav as $menu)
                  
-                    <a class="{{isset($menu) ? 'active' : ''}}" href="{{url('account/userwatchlist', $menu->slug)}}" title="{{$menu->name}}">{{$menu->name}}</a>
+                    <a class="{{isset($menu) ? 'active' : ''}}" href="{{url('myaccount/userwatchlist', $menu->slug)}}" title="{{$menu->name}}">{{$menu->name}}</a>
                    @endforeach
               @endif
           </div>

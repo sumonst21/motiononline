@@ -24,7 +24,7 @@
         <?php if(isset($question) && count($question)>0): ?>
          <?php $__currentLoopData = $question; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ques): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
        
-        <p style="font-size: 16px; color: #286090">Ques: <?php echo e($ques->question); ?>?</p>
+        <p style="font-size: 16px; color: #ffffff">Ques: <?php echo e($ques->question); ?>?</p>
         <?php if(isset($ques->answer) && !is_null($ques->answer)): ?>
         <p style="font-size: 16px;">Reply: <?php echo e($ques->answer); ?></p>
         <?php else: ?>

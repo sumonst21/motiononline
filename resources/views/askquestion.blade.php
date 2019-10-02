@@ -25,7 +25,7 @@
         @if(isset($question) && count($question)>0)
          @foreach($question as $ques)
        
-        <p style="font-size: 16px; color: #286090">Ques: {{$ques->question}}?</p>
+        <p style="font-size: 16px; color: #ffffff">Ques: {{$ques->question}}?</p>
         @if(isset($ques->answer) && !is_null($ques->answer))
         <p style="font-size: 16px;">Reply: {{$ques->answer}}</p>
         @else

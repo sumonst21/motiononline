@@ -38,7 +38,7 @@
                  
                   <?php $__currentLoopData = $nav; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $menu): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                  
-                    <a class="<?php echo e(isset($menu) ? 'active' : ''); ?>" href="<?php echo e(url('account/userwatchlist', $menu->slug)); ?>" title="<?php echo e($menu->name); ?>"><?php echo e($menu->name); ?></a>
+                    <a class="<?php echo e(isset($menu) ? 'active' : ''); ?>" href="<?php echo e(url('myaccount/userwatchlist', $menu->slug)); ?>" title="<?php echo e($menu->name); ?>"><?php echo e($menu->name); ?></a>
                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               <?php endif; ?>
           </div>
