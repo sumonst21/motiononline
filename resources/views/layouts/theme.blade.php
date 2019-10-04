@@ -293,7 +293,7 @@ Author: Media City
       }
       @endphp
       <div id="notification_id" onclick="readed('{{$n->id}}')" class="card" style="padding: 6px;" >
-        <p style="color: #2980b9; font-size: 17px; padding: 3px;"><b> {{$n->title}}</b></p>
+        <p style="color: #F00; font-size: 17px; padding: 3px;"><b> {{$n->title}}</b></p>
         <p style="margin-top: -6px; font-size: 16px;"> {{$n->data['data']}} &nbsp 
           @if(isset($tvname))
       <a type="button" href="{{url('show/detail',$n->tv_id)}}" style="font-size: 16px; color:  #a9ea81">

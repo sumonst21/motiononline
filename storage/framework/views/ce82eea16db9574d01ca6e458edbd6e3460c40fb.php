@@ -293,7 +293,7 @@ Author: Media City
       }
       ?>
       <div id="notification_id" onclick="readed('<?php echo e($n->id); ?>')" class="card" style="padding: 6px;" >
-        <p style="color: #2980b9; font-size: 17px; padding: 3px;"><b> <?php echo e($n->title); ?></b></p>
+        <p style="color: #F00; font-size: 17px; padding: 3px;"><b> <?php echo e($n->title); ?></b></p>
         <p style="margin-top: -6px; font-size: 16px;"> <?php echo e($n->data['data']); ?> &nbsp 
           <?php if(isset($tvname)): ?>
       <a type="button" href="<?php echo e(url('show/detail',$n->tv_id)); ?>" style="font-size: 16px; color:  #a9ea81">

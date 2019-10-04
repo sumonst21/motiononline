@@ -590,10 +590,9 @@ foreach ($all_movies as $item) {
   @endphp
   @if($t3->status == 1)
   <div class="container-fluid">
-    <h5 class="section-heading inline">{{$genre->name}} {{$home_translations->where('key', 'movies')->first->value->value}}</h5>
+    <h5 class="section-heading inline">{{$genre->name}}</h5>
 
-    <a href="{{url('movies/genre', $genre->id)}}" class="see-more"> <b>{{$home_translations->where('key', 'view all')->first->value->value}}</b></a>
-    <div class="genre-prime-slider owl-carousel">
+     <div class="genre-prime-slider owl-carousel">
       @foreach($movies as $t => $movie)
       @php
       $wishlist_check = \Illuminate\Support\Facades\DB::table('wishlists')->where([

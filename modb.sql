@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-10-2019 a las 21:23:41
+-- Tiempo de generación: 04-10-2019 a las 21:48:56
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -393,7 +393,11 @@ INSERT INTO `exercise_reports` (`id`, `exercise_id`, `value`, `created_at`, `upd
 (57, 12, 90, '2019-09-29 18:08:46', '2019-09-29 18:08:46', 32),
 (58, 12, 95, '2019-09-29 18:08:56', '2019-09-29 18:08:56', 32),
 (59, 12, 100, '2019-09-29 18:10:13', '2019-09-29 18:10:13', 32),
-(60, 12, 110, '2019-09-29 18:10:32', '2019-09-29 18:10:32', 32);
+(60, 12, 110, '2019-09-29 18:10:32', '2019-09-29 18:10:32', 32),
+(61, 8, 100, '2019-10-04 19:29:54', '2019-10-04 19:29:54', 30),
+(62, 8, 150, '2019-10-04 19:30:09', '2019-10-04 19:30:09', 30),
+(63, 9, 85, '2019-10-04 19:30:21', '2019-10-04 19:30:21', 30),
+(64, 9, 110, '2019-10-04 19:30:30', '2019-10-04 19:30:30', 30);
 
 -- --------------------------------------------------------
 
@@ -1329,6 +1333,7 @@ CREATE TABLE `notifications` (
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_id`, `notifiable_type`, `data`, `movie_id`, `tv_id`, `title`, `read_at`, `created_at`, `updated_at`) VALUES
 ('11de1773-c7d0-4eaa-bdd6-bd8e218f27ff', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"sasa\",\"data\":\"sasassasasa\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'sasa', '2019-10-02 14:00:54', '2019-10-02 13:21:26', '2019-10-02 14:00:54'),
+('131c1207-16b7-4c23-9c1c-4763f5451e5c', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Tienes alguna duda?, consultanos en \\\"Mi chat\\\" !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', '2019-10-04 22:35:55', '2019-10-03 16:24:03', '2019-10-04 22:35:55'),
 ('1ce127d1-22af-433c-ac56-9b5c2d91fbeb', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', '2019-10-02 14:04:46', '2019-10-02 14:03:38', '2019-10-02 14:04:46'),
 ('1d99bf34-e072-4bfb-9a96-57e07330bcaa', 'App\\Notifications\\MyNotification', 32, 'App\\User', '{\"title\":\"Dudas\",\"data\":\"Tienes alguna duda?, consultanos en \\\"Mi chat\\\" !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"32\"]]}', 0, 0, 'Dudas', NULL, '2019-09-30 03:53:40', '2019-09-30 03:53:40'),
 ('230aa2fb-b4af-4c8f-93af-1e5cde684326', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Toca evaluarte\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"29\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1]}', 29, 0, 'Toca evaluarte', '2019-09-17 16:37:27', '2019-09-17 16:36:58', '2019-09-17 16:37:27'),
@@ -1336,7 +1341,7 @@ INSERT INTO `notifications` (`id`, `type`, `notifiable_id`, `notifiable_type`, `
 ('3ad3436e-45a4-4335-b827-c30c114836d0', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"my new notification\",\"data\":\"Just an example,,go and create notification from admin\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'my new notification', '2019-09-17 16:30:19', '2019-09-17 15:30:14', '2019-09-17 16:30:19'),
 ('60785e09-4cf8-4d1d-9ad6-5d251ad9e9dc', 'App\\Notifications\\MyNotification', 32, 'App\\User', '{\"title\":\"Bienvenido a Motion Online\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"32\"]]}', 0, 0, 'Bienvenido a Motion Online', NULL, '2019-09-30 03:52:44', '2019-09-30 03:52:44'),
 ('7f13988e-f833-49cb-b9c8-29c75609d46b', 'App\\Notifications\\MyNotification', 28, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24,25,26,27,28]}', 0, 0, 'Entrenaste ?', NULL, '2019-09-17 16:29:08', '2019-09-17 16:29:08'),
-('82ebb86a-0c4a-429d-a5af-49a73599fe59', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', NULL, '2019-10-02 18:29:46', '2019-10-02 18:29:46'),
+('82ebb86a-0c4a-429d-a5af-49a73599fe59', 'App\\Notifications\\MyNotification', 1, 'App\\User', '{\"title\":\"Pre kine rodilla\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"1\"]]}', 0, 0, 'Pre kine rodilla', '2019-10-03 16:21:50', '2019-10-02 18:29:46', '2019-10-03 16:21:50'),
 ('82ed4268-eeb5-4045-a577-de978a03509b', 'App\\Notifications\\MyNotification', 24, 'App\\User', '{\"title\":\"Toca evaluarte\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"29\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24]}', 29, 0, 'Toca evaluarte', NULL, '2019-09-17 16:36:58', '2019-09-17 16:36:58'),
 ('9a7b9059-ee4c-4e9d-a0cf-6ae022c5c4f1', 'App\\Notifications\\MyNotification', 24, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24]}', 0, 0, 'Entrenaste ?', NULL, '2019-09-17 16:29:08', '2019-09-17 16:29:08'),
 ('a1909518-493a-442d-88f9-365a887fce8e', 'App\\Notifications\\MyNotification', 27, 'App\\User', '{\"title\":\"Entrenaste ?\",\"data\":\"Hola !, ya fuiste a entrenar hoy?, vamos animo !!\",\"movie_id\":\"0\",\"tv_id\":\"0\",\"notifiable_id\":[[\"0\"],1,24,25,26,27]}', 0, 0, 'Entrenaste ?', '2019-09-17 16:40:39', '2019-09-17 16:29:08', '2019-09-17 16:40:39'),
@@ -1792,14 +1797,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `image`, `email`, `password`, `google_id`, `facebook_id`, `gitlab_id`, `dob`, `mobile`, `stripe_id`, `card_brand`, `card_last_four`, `trial_ends_at`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', NULL, 'admin@mediacity.co.in', '$2y$10$1w2kbraQWFVkZVcyAwXmgeGhD4QYxTcg9Hx12KYtNN821CuOMtyda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'lSZ90Op5Z73SHhAIMc101xNAAadbTOhMuanFYcpiNs2AkxfyzZMpTAwBM5VC', '2018-04-24 07:56:34', '2018-04-24 07:56:34'),
+(1, 'Admin', NULL, 'admin@mediacity.co.in', '$2y$10$1w2kbraQWFVkZVcyAwXmgeGhD4QYxTcg9Hx12KYtNN821CuOMtyda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'trQp3hD8syPFnnjkh37z5w99sF3dajpGb9PGA0hW5nrtcpFvKo7hk2CrEBDT', '2018-04-24 07:56:34', '2018-04-24 07:56:34'),
 (24, 'Jorge Caca', NULL, 'jorge@caca.com', '$2y$10$AnaSIa0OtRknN.pC17mY8e8yreDNk/aqB/ebDfPa2eyOuXqyQSvVa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'rTsjc0ZvoQpvTdLIimgfsGppKJ7EYVxFj4Dd69HKqoat2J1OPGGf3335m6o9', '2019-08-27 21:29:37', '2019-08-28 00:00:17'),
 (25, 'Martina Dovic Z.', NULL, 'martinadzaf@uolmail.com', '$2y$10$EEyjTuuwup6tfCVRRxd3WuLNw9twH.guNPpIMAAIHuVGgHsC2fLGm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'OgkBxh2HriMbSzJivllGE4TnkMsRCvHE8qtMobBofwA5NBkNuQzDRLJwg4qS', '2019-08-27 21:30:03', '2019-10-01 20:15:54'),
 (26, 'Diosito Borges', NULL, 'diosito@caca.com', '$2y$10$5dS7IbOvX3vjHxUxSlLbDOdG0fTK..sR2uCwhABstQcDs7KSbtO8.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'FBUiQtumBIrp6XTYBmBh8obPDtpA99VErMLc1fkvhfXwIho4I2zgr5ICFHjQ', '2019-08-27 21:30:31', '2019-08-28 00:00:46'),
 (27, 'Kimi Linda', NULL, 'kimilinda@amor.com', '$2y$10$bLH7K9eKx4LYl19OGtHJGeh4b.Sx6hUD4wUlHKLs3RTmfIs2DtzYm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'po1KLVTQ64h48YnuMXfvLdlxNIRWxmRgvZw8D9GZofV4vODY2j1NGaydELfm', '2019-08-27 21:31:06', '2019-08-28 00:00:01'),
 (28, 'Jose Pelado', NULL, 'pelao@caca.com', '$2y$10$x/SJzlbmrLPWWnO9X1iyj.7N0nv4KQ2LOthEEyQ10R0BlTywNVpI6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'N0YhAomapcyLlSKhjA7dSvIzFJwcfD8OTSbdsb1EtGClzUKuWUOdE05hwJbE', '2019-08-27 21:31:33', '2019-08-27 23:59:39'),
 (29, 'Enrique Castro Olave', NULL, 'enriquecastroolave@gmail.com', '$2y$10$c3z9wPKFfFHUbmNFLDcvyeHjGHVvVfn6OQor9SLa3fhpDZiweJXVa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'vPMqQCtCIt01Qngpm4inOzaOCs3vFruQJqdW9Mvv5TFmxoZXChh16U0KB0Kx', '2019-09-23 20:49:25', '2019-09-23 20:49:25'),
-(30, 'JOSE MANUEL GOMEZ L.', NULL, 'JGOMEZ@MOTIONCENTER.CL', '$2y$10$m8JPqz78GSDlFB.qDoldNOr4/7ZYZbW8NiVshXKjEjZlPNqmL.Q/i', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '7P11AoseUnWXXB8yepy4oXv7bEyGyziGpMG5dmcq18zeOyOrEypG8umHH6Yp', '2019-09-24 21:55:57', '2019-09-24 21:55:57'),
+(30, 'JOSE MANUEL GOMEZ L.', NULL, 'JGOMEZ@MOTIONCENTER.CL', '$2y$10$m8JPqz78GSDlFB.qDoldNOr4/7ZYZbW8NiVshXKjEjZlPNqmL.Q/i', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'SgdUtPp6Tzb9oyMnmsnxQFxv6d9h0ZS410OIWQWrOl3FHUHhavSvkxSIUQOL', '2019-09-24 21:55:57', '2019-09-24 21:55:57'),
 (31, 'Juan Jose Zunino', NULL, 'jjzunino@underarmour.cl', '$2y$10$6uHUDfsLWagqycTJ7W0UG.HYc5amIoDaUltoI1X5eWzvDdXPyVpWy', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '7GYPugzVFHL5CAMcUufktzZJq4YOPUGCb94zCtQbwjzrbuqdXDHrmNqUESI6', '2019-09-26 16:19:51', '2019-09-26 16:19:51'),
 (32, 'Josefina Hernandez Z.', NULL, 'jherndzaf@uolmail.com', '$2y$10$YaHAxQQ2PXZLdiuZYyShnuyRFjJtkwJOpxrxIO6pVdO32c0.XAhc2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 's1p2nrX14gamtWZZYZG8NkltNp5ujOdCBlViYEBcvwi0vK1zoB8UJUgjAnsA', '2019-09-29 19:44:25', '2019-09-29 19:44:25');
 
@@ -2100,7 +2105,12 @@ INSERT INTO `views` (`id`, `viewable_type`, `viewable_id`, `visitor`, `collectio
 (199, 'App\\Movie', 144, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-26 15:38:01'),
 (200, 'App\\Movie', 29, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-09-26 15:43:14'),
 (201, 'App\\Movie', 43, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 14:04:51'),
-(202, 'App\\Movie', 138, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 14:08:44');
+(202, 'App\\Movie', 138, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 14:08:44'),
+(203, 'App\\Movie', 145, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 23:39:28'),
+(204, 'App\\Movie', 145, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-02 23:40:08'),
+(205, 'App\\Movie', 29, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-04 22:31:28'),
+(206, 'App\\Movie', 144, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-04 22:32:23'),
+(207, 'App\\Movie', 144, 'G6az5dXt2yb7AkHrguW000w59c91EV4Cfrq5mRa21Raa1ePIRD1E47L4sqk4MVU6rwOSskkPax9wNxiR', NULL, '2019-10-04 22:32:54');
 
 -- --------------------------------------------------------
 
@@ -2671,7 +2681,7 @@ ALTER TABLE `excersices`
 -- AUTO_INCREMENT de la tabla `exercise_reports`
 --
 ALTER TABLE `exercise_reports`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de la tabla `faqs`
@@ -2821,7 +2831,7 @@ ALTER TABLE `pricing_texts`
 -- AUTO_INCREMENT de la tabla `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -2881,7 +2891,7 @@ ALTER TABLE `videolinks`
 -- AUTO_INCREMENT de la tabla `views`
 --
 ALTER TABLE `views`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT de la tabla `wishlists`

@@ -589,10 +589,9 @@ foreach ($all_movies as $item) {
   ?>
   <?php if($t3->status == 1): ?>
   <div class="container-fluid">
-    <h5 class="section-heading inline"><?php echo e($genre->name); ?> <?php echo e($home_translations->where('key', 'movies')->first->value->value); ?></h5>
+    <h5 class="section-heading inline"><?php echo e($genre->name); ?></h5>
 
-    <a href="<?php echo e(url('movies/genre', $genre->id)); ?>" class="see-more"> <b><?php echo e($home_translations->where('key', 'view all')->first->value->value); ?></b></a>
-    <div class="genre-prime-slider owl-carousel">
+     <div class="genre-prime-slider owl-carousel">
       <?php $__currentLoopData = $movies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t => $movie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
       <?php
       $wishlist_check = \Illuminate\Support\Facades\DB::table('wishlists')->where([

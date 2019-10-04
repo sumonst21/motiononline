@@ -3269,3 +3269,7 @@ text {
     
     background-color: #111;
   }
+
+  ul.dropdown-menu.prime-dropdown-menu-right {
+    background: #111 !important;
+}
